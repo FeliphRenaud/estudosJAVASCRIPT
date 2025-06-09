@@ -74,3 +74,68 @@ function escopoAninhado() {
 escopoAninhado()
 
 console.log(m);
+
+// arrow function
+
+const testeArrow = () => {
+  console.log('Esta é uma arrow function');
+  
+}
+
+testeArrow()
+
+const parOuImpar = (n) => {
+  if (n% 2 === 0) {
+    console.log(`o numero ${n} é par`);
+    
+  } else {
+    console.log(`o numero ${n} é impar`);
+    
+  }
+}
+
+parOuImpar(2)
+
+// arrow resumida
+
+//metodo tradicional
+const raizQuadrada = (x) => {
+  return Math.sqrt(x)
+}
+
+console.log(raizQuadrada(2500));
+//metodo reduzido 
+
+const raizQuadrada2 = (x) => x ** 0.5;
+console.log(raizQuadrada2(2500));
+
+// função com parametro opcional
+
+const multiplication = (m,n) => {
+  if (n=== undefined) {
+    return m*m
+  } else {
+    return m*n
+  }
+
+}
+
+console.log(multiplication(5));
+console.log(multiplication(5, 2));
+
+
+const greeting = (name) => {
+  if (!name) {
+    console.log("Olá !");
+    return
+  }
+
+  console.log(`Ola, ${name}`);
+  
+}
+
+greeting()
+greeting("Feliph")
+
+
+
