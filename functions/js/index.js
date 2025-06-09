@@ -138,4 +138,21 @@ greeting()
 greeting("Feliph")
 
 
+// argumento default
 
+const custonGreeting = (name, greet = "Olá") => {
+  return `${greet}, ${name}`
+}
+
+console.log(custonGreeting("Feliph"));
+console.log(custonGreeting("Feliph", "Bom dia meu chapa"));
+
+const repeatText = (text, repeat = 2) => {
+  for (let i = 0; i < repeat; i++){
+    console.log(text);
+    
+  }
+}
+
+repeatText("testando")
+repeatText("Agora repete 5 vezes", 5)
