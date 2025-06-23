@@ -179,5 +179,114 @@ console.log(Object.keys(car));
 
 console.log(Object.entries(car));
 
+// METODOS DE STRING
+
+//trim
+const trimTeste = "   testando \n   "
+
+console.log(trimTeste);
+console.log(trimTeste.trim());
+
+//padstart
+
+const testePadStart = "1"
+const newNumber = testePadStart.padStart(4, "0")
+console.log(testePadStart);
+console.log(newNumber);
+
+//padEnd
+
+const padEnd = newNumber.padEnd(10, "0")
+console.log(padEnd);
+
+// split
+
+const frase = " Nunca comece uma guerra que não pode ganhar"
+
+const arrayDaFraseEmPalavras = frase.split(" ")
+const arrayDaFraseEmLetras = frase.split("")
+console.log(arrayDaFraseEmPalavras);
+console.log(arrayDaFraseEmLetras);
+
+//join
+
+const reunificadorDeFrase = arrayDaFraseEmPalavras.join(" ")
+console.log(reunificadorDeFrase);
+
+const itemsParaCompra = ["Mouse", "Teclado", "Monitor"]
+const fraseParaSetorCompras = `Precismaos comprar ${itemsParaCompra.join(", ")}`
+console.log(fraseParaSetorCompras);
+
+// repeat
+
+const repeat = " testando"
+console.log(repeat.repeat(3));
+
+
+//restOperator
+
+const somaInfinita = (...args) => {
+  let total = 0
+
+  for (let i = 0; i < args.length; i++){
+    total += args[i]
+  }
+  return total
+}
+
+console.log(somaInfinita(1, 2, 3, 4, 5, 6, 7, 8, 9));
+console.log(somaInfinita(1,2,3));
+
+//ForOf
+
+const somaInfinita2 = (...args) => {
+  let total = 0 
+  for (num of args) {
+    total += num
+  }
+  return total
+}
+
+console.log(somaInfinita2(3,5,7,9,1));
+
+//destruturing em objetos
+
+const usersDetails = { 
+  firstName:"feliph",
+  lastName:"renaud",
+  job:"Programador"
+}
+
+const { firstName, lastName, job } = usersDetails
+console.log(firstName, lastName, job);
+
+// destructuring copm arrays
+
+const myList = ["avião", "submarino", "carro", "Trator"]
+
+const [veiculoA, veiculoB, veiculoC] = myList
+
+console.log(veiculoA, veiculoB, veiculoC);
+
+//json
+
+const myJson = '{ "name": "Feliph", "age": 31, "skills": ["JS", "PHP", "TS"]}'
+
+console.log(myJson);
+console.log(typeof myJson);
+
+//json -> object -> json
+
+const myObject = JSON.parse(myJson)
+
+console.log(myObject);
+console.log(typeof myObject);
+
+const myNewObject = JSON.stringify(myObject)
+console.log(myNewObject);
+console.log(typeof myNewObject);
+
+
+
 
 
